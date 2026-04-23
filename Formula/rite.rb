@@ -1,28 +1,27 @@
 class Rite < Formula
   desc "DSL and runtime for cryptographic key ceremonies"
   homepage "https://ritely.io"
-  version "0.1.0-rc.2"
   license "GPL-3.0-only"
 
   on_macos do
     on_arm do
-      url "https://github.com/rite-ly/rite/releases/download/v#{version}/rite-#{version}-darwin-arm64.tar.gz"
-      sha256 "bfe85bddbab234e3f91fe12f876de6945392956d7bc3e0229c8452b4da7534e9"
+      url "https://github.com/rite-ly/rite/releases/download/v0.1.0-rc.3/rite-0.1.0-rc.3-darwin-arm64.tar.gz"
+      sha256 "f269dfd4b4de1ed56b6e799269e78a413d73677462fce896538e1e55026800d3"
     end
     on_intel do
-      url "https://github.com/rite-ly/rite/releases/download/v#{version}/rite-#{version}-darwin-amd64.tar.gz"
-      sha256 "1f58b34fc8d78ed676aff102bc9fd264b6da46853e7eabfffaf667f8530c834e"
+      url "https://github.com/rite-ly/rite/releases/download/v0.1.0-rc.3/rite-0.1.0-rc.3-darwin-amd64.tar.gz"
+      sha256 "836d73a022084778b9dd65b146ab9303fa808f3e5fa195eea7dbbbefa7f9fc76"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/rite-ly/rite/releases/download/v#{version}/rite-#{version}-linux-amd64.tar.gz"
-      sha256 "acbd81e3a6f5c08785679b3efc75a319d85199081018ef0813138848ed95ae0b"
+      url "https://github.com/rite-ly/rite/releases/download/v0.1.0-rc.3/rite-0.1.0-rc.3-linux-amd64.tar.gz"
+      sha256 "33f324a6342aaf41fc6fa12c8cf3ae91a121b25bfe31ccb76d6731a565da8dbc"
     end
     on_arm do
-      url "https://github.com/rite-ly/rite/releases/download/v#{version}/rite-#{version}-linux-arm64.tar.gz"
-      sha256 "461071e22e19312280650a53fface4bc484da8c6ac981b946524862e5a0a157a"
+      url "https://github.com/rite-ly/rite/releases/download/v0.1.0-rc.3/rite-0.1.0-rc.3-linux-arm64.tar.gz"
+      sha256 "54608827071caba8be90a56cdd9c3b7dd2b35245df66fbdad058c6c8e7fe12b2"
     end
   end
 
