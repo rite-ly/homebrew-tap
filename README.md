@@ -1,6 +1,6 @@
-# Rite-ly Tap
+# Rite-ly tap
 
-Homebrew tap for [Rite-ly](https://ritely.io) — a DSL and runtime for cryptographic key ceremonies.
+Homebrew tap for [Rite-ly](https://ritely.io).
 
 ## Install
 
