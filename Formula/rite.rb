@@ -31,6 +31,6 @@ class Rite < Formula
   end
 
   test do
-    assert_match "rite #{version}", shell_output("#{bin}/rite --version")
+    assert_match "cryptographic key ceremonies", shell_output("#{bin}/rite --help")
   end
 end
