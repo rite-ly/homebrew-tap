@@ -5,23 +5,23 @@ class Rite < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/rite-ly/rite/releases/download/v0.1.0-rc.4/rite-0.1.0-rc.4-darwin-arm64.tar.gz"
-      sha256 "ab611b69b62e9590227c2f58eb75b4c63fd8cb7a4d877376f8574557fb4838a4"
+      url "https://github.com/rite-ly/rite/releases/download/v0.1.0/rite-0.1.0-darwin-arm64.tar.gz"
+      sha256 "761309cbb8645b8a855e89a3cd4e89bf813cc963867d2c4d05965637f91e6f52"
     end
     on_intel do
-      url "https://github.com/rite-ly/rite/releases/download/v0.1.0-rc.4/rite-0.1.0-rc.4-darwin-amd64.tar.gz"
-      sha256 "6702bfc6e5eb92877bc065a7c4c0af31bfe0b3260504892288c0226a18bb71b4"
+      url "https://github.com/rite-ly/rite/releases/download/v0.1.0/rite-0.1.0-darwin-amd64.tar.gz"
+      sha256 "4e009fd7924c62c1cbe81b6b9b35e0d00d578e9db43d470a27d7409ad6639648"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/rite-ly/rite/releases/download/v0.1.0-rc.4/rite-0.1.0-rc.4-linux-amd64.tar.gz"
-      sha256 "0ca43a52b26b9fc927f2476d102f8a19053632133032a9299bab87bd7ae3c058"
+      url "https://github.com/rite-ly/rite/releases/download/v0.1.0/rite-0.1.0-linux-amd64.tar.gz"
+      sha256 "01b7b8a43f2ba38c3b108e1066e6abdda20a2ded6f619491237b722be41bea53"
     end
     on_arm do
-      url "https://github.com/rite-ly/rite/releases/download/v0.1.0-rc.4/rite-0.1.0-rc.4-linux-arm64.tar.gz"
-      sha256 "ac44e8059fbb4b950139b5fa284925f17aea969f845ec2403bcbd1bdf03e6d95"
+      url "https://github.com/rite-ly/rite/releases/download/v0.1.0/rite-0.1.0-linux-arm64.tar.gz"
+      sha256 "ceb1c37737425c103b2a90fd1e1ddded93ca0589898a22d1044928a5139e1e08"
     end
   end
 
