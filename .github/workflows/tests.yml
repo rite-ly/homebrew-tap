@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@51347a66bfd5b30903757d0b64ba2ca462e9ab38 # main
+        uses: Homebrew/actions/setup-homebrew@ac93e64636f67b85384f251de7359f58c5dee140 # main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
