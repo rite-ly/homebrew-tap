@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "homebrew": {
+    "enabled": false
+  },
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["Formula/rite.rb"],
+      "matchStrings": ["version \"(?<currentValue>[^\"]+)\""],
+      "depNameTemplate": "rite",
+      "packageNameTemplate": "rite-ly/rite",
+      "datasourceTemplate": "github-releases",
+      "extractVersionTemplate": "^v(?<version>.+)$",
+      "autoReplaceStringTemplate": "version \"{{{newValue}}}\""
+    }
+  ],
+  "postUpgradeTasks": {
+    "commands": ["scripts/update-formula.sh {{{newVersion}}}"],
+    "fileFilters": ["Formula/**"],
+    "executionMode": "branch"
+  }
+}
