@@ -3,8 +3,6 @@
 #
 # Usage:
 #   ./scripts/update-formula.sh VERSION
-#
-# Requires: gh CLI (https://cli.github.com/)
 
 set -euo pipefail
 
@@ -20,8 +18,9 @@ trap cleanup EXIT
 VERSION="${1:?Usage: $0 VERSION}"
 
 echo "Fetching SHA256SUMS for v${VERSION}..."
-gh release download "v${VERSION}" --repo "$REPO" --pattern 'SHA256SUMS' --dir "$TMP_DIR"
 SUMS="$TMP_DIR/SHA256SUMS"
+curl -fsSL -o "$SUMS" \
+    "https://github.com/${REPO}/releases/download/v${VERSION}/SHA256SUMS"
 
 sha_for() {
     local asset="rite-${VERSION}-${1}.tar.gz"
