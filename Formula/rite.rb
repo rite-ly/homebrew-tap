@@ -6,8 +6,8 @@ class Rite < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/rite-ly/rite/releases/download/v0.1.0/rite-0.1.0-darwin-arm64.tar.gz"
-      sha256 "761309cbb8645b8a855e89a3cd4e89bf813cc963867d2c4d05965637f91e6f52"
+      url "https://github.com/rite-ly/rite/archive/refs/tags/v0.1.1.tar.gz"
+      sha256 "6b392a4206e8fc958a45693647e086538007236b4b9eb8c20bbcc62cfae41254"
     end
     on_intel do
       url "https://github.com/rite-ly/rite/releases/download/v0.1.0/rite-0.1.0-darwin-amd64.tar.gz"
