@@ -15,9 +15,14 @@
       "autoReplaceStringTemplate": "version \"{{{newValue}}}\""
     }
   ],
-  "postUpgradeTasks": {
-    "commands": ["scripts/update-formula.sh {{{newVersion}}}"],
-    "fileFilters": ["Formula/**"],
-    "executionMode": "branch"
-  }
+  "packageRules": [
+    {
+      "matchPackageNames": ["rite-ly/rite"],
+      "postUpgradeTasks": {
+        "commands": ["scripts/update-formula.sh {{{newVersion}}}"],
+        "fileFilters": ["Formula/**"],
+        "executionMode": "update"
+      }
+    }
+  ]
 }
