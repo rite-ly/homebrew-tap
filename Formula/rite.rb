@@ -1,7 +1,6 @@
 class Rite < Formula
   desc "DSL and runtime for cryptographic key ceremonies"
   homepage "https://ritely.io"
-  version "0.4.1"
   license "GPL-3.0-only"
 
   on_macos do
