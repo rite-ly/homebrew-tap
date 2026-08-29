@@ -6,13 +6,14 @@
   "customManagers": [
     {
       "customType": "regex",
+      "description": "The formula declares no version: brew scans it from the URL and audit rejects the duplicate. Only this URL is matched; update-formula.sh rewrites the others and the checksums.",
       "managerFilePatterns": ["Formula/rite.rb"],
-      "matchStrings": ["version \"(?<currentValue>[^\"]+)\""],
+      "matchStrings": ["releases/download/v(?<currentValue>[^/]+)/rite-[^\"]*-darwin-arm64\\.tar\\.gz"],
       "depNameTemplate": "rite",
       "packageNameTemplate": "rite-ly/rite",
       "datasourceTemplate": "github-releases",
       "extractVersionTemplate": "^v(?<version>.+)$",
-      "autoReplaceStringTemplate": "version \"{{{newValue}}}\""
+      "autoReplaceStringTemplate": "releases/download/v{{{newValue}}}/rite-{{{newValue}}}-darwin-arm64.tar.gz"
     }
   ],
   "packageRules": [
