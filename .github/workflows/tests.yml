@@ -6,14 +6,6 @@ on:
       - main
   pull_request:
 
-# Homebrew's tap-trust feature (landing on `main`, default in 5.2.0/6.0.0) makes
-# `brew doctor` fail on non-official taps that aren't in `trust.json`. test-bot's
-# own trust write isn't seen by the doctor run it invokes, so opt out for the
-# transition: this tap's own CI builds and tests its own formula, where the
-# end-user trust prompt does not apply.
-env:
-  HOMEBREW_NO_REQUIRE_TAP_TRUST: "1"
-
 jobs:
   test-bot:
     strategy:
@@ -35,6 +27,9 @@ jobs:
         uses: Homebrew/actions/setup-homebrew@3cdb78d0f62ad29dd32de765782654f4eedea607 # main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Trust tap
+        run: brew trust --tap rite-ly/tap
 
       - name: Cache Homebrew Bundler RubyGems
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
