@@ -1,8 +1,8 @@
 class Rite < Formula
   desc "DSL and runtime for cryptographic key ceremonies"
   homepage "https://ritely.io"
-  url "https://github.com/rite-ly/rite/releases/download/v0.5.0/rite-0.5.0-darwin-arm64.tar.gz"
-  sha256 "a7664ec3f76c7f5928cc7b0129022ebb08b8669957d0d69be511d49573d40f0f"
+  url "https://github.com/rite-ly/rite/releases/download/v0.6.0/rite-0.6.0-darwin-arm64.tar.gz"
+  sha256 "5249d0b509e89b65060504f3a9abcb6dd7872667ced196f455b7d650d409a451"
   license "GPL-3.0-only"
 
   on_macos do
@@ -11,12 +11,12 @@ class Rite < Formula
 
   on_linux do
     on_intel do
-      url "https://github.com/rite-ly/rite/releases/download/v0.5.0/rite-0.5.0-linux-amd64.tar.gz"
-      sha256 "b92afc5a63615cad827057b66b177233e695746770242b4bbdaea9add8925615"
+      url "https://github.com/rite-ly/rite/releases/download/v0.6.0/rite-0.6.0-linux-amd64.tar.gz"
+      sha256 "e3e6aebfd67ec2a6f04f5d96d277d14d72679e6aa4295a3a52bb36cf20d28372"
     end
     on_arm do
-      url "https://github.com/rite-ly/rite/releases/download/v0.5.0/rite-0.5.0-linux-arm64.tar.gz"
-      sha256 "cdab0e78149232aebd2aff4df4d578242b97449054ee60cf7f73064e51d6432f"
+      url "https://github.com/rite-ly/rite/releases/download/v0.6.0/rite-0.6.0-linux-arm64.tar.gz"
+      sha256 "6e6f4633b1f935d86f134acf22d282e068fe0ca2871caba9268eab932319185a"
     end
   end
 
