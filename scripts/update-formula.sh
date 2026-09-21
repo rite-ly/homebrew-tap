@@ -34,13 +34,11 @@ sha_for() {
 }
 
 SHA_DARWIN_ARM64=$(sha_for darwin-arm64)
-SHA_DARWIN_AMD64=$(sha_for darwin-amd64)
 SHA_LINUX_AMD64=$(sha_for linux-amd64)
 SHA_LINUX_ARM64=$(sha_for linux-arm64)
 
 printf "  %-13s -> %s\n" \
   darwin-arm64 "${SHA_DARWIN_ARM64}" \
-  darwin-amd64 "${SHA_DARWIN_AMD64}" \
   linux-amd64 "${SHA_LINUX_AMD64}" \
   linux-arm64 "${SHA_LINUX_ARM64}"
 
@@ -49,14 +47,13 @@ printf "  %-13s -> %s\n" \
 sed -i.bak -E \
   -e "s|releases/download/v[^/]+/rite-[^-]+-|releases/download/v${VERSION}/rite-${VERSION}-|g" \
   -e "/-darwin-arm64\.tar\.gz\"\$/{n;s|sha256 \".*\"|sha256 \"${SHA_DARWIN_ARM64}\"|;}" \
-  -e "/-darwin-amd64\.tar\.gz\"\$/{n;s|sha256 \".*\"|sha256 \"${SHA_DARWIN_AMD64}\"|;}" \
   -e "/-linux-amd64\.tar\.gz\"\$/{n;s|sha256 \".*\"|sha256 \"${SHA_LINUX_AMD64}\"|;}" \
   -e "/-linux-arm64\.tar\.gz\"\$/{n;s|sha256 \".*\"|sha256 \"${SHA_LINUX_ARM64}\"|;}" \
   "${FORMULA}"
 rm -f "${FORMULA}.bak"
 
 # Sanity check: every computed sha must now appear in the formula.
-for sha in "${SHA_DARWIN_ARM64}" "${SHA_DARWIN_AMD64}" "${SHA_LINUX_AMD64}" "${SHA_LINUX_ARM64}"
+for sha in "${SHA_DARWIN_ARM64}" "${SHA_LINUX_AMD64}" "${SHA_LINUX_ARM64}"
 do
   if ! grep -q "${sha}" "${FORMULA}"
   then

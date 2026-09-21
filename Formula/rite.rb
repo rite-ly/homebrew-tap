@@ -1,17 +1,12 @@
 class Rite < Formula
   desc "DSL and runtime for cryptographic key ceremonies"
   homepage "https://ritely.io"
+  url "https://github.com/rite-ly/rite/releases/download/v0.5.0/rite-0.5.0-darwin-arm64.tar.gz"
+  sha256 "a7664ec3f76c7f5928cc7b0129022ebb08b8669957d0d69be511d49573d40f0f"
   license "GPL-3.0-only"
 
   on_macos do
-    on_arm do
-      url "https://github.com/rite-ly/rite/releases/download/v0.5.0/rite-0.5.0-darwin-arm64.tar.gz"
-      sha256 "a7664ec3f76c7f5928cc7b0129022ebb08b8669957d0d69be511d49573d40f0f"
-    end
-    on_intel do
-      url "https://github.com/rite-ly/rite/releases/download/v0.5.0/rite-0.5.0-darwin-amd64.tar.gz"
-      sha256 "a46230c4fa18d1c54f2e3d03f67c5ecc190d24fda38c119abd4c1eaea1f010fe"
-    end
+    depends_on arch: :arm64
   end
 
   on_linux do
