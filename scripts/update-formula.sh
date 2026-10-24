@@ -25,7 +25,7 @@ curl -fsSL -o "${SUMS}" \
 sha_for() {
   local asset="rite-${VERSION}-${1}.tar.gz"
   local line
-  if ! line=$(grep "/${asset}\$" "${SUMS}")
+  if ! line=$(grep -E "[ /]${asset}\$" "${SUMS}")
   then
     echo "No SHA256SUMS entry for ${asset}" >&2
     exit 1
